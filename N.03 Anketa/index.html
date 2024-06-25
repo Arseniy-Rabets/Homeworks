@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let func = function(a) {
+      for(;a == "" || parseInt(a);){
+        a = prompt("Ваше имя")
+      }
+      return a
+    }
+
+    let userName = prompt("Ваше имя")
+
+    func(userName)
+
+    let userLastName = prompt("Ваша фамилия")
+
+    func(userLastName)
+
+    let userSurname = prompt("Ваше отчество")
+
+    func(userSurname)
+    
+    let userAge = parseInt(prompt("Ваш возраст"))
+
+    for(;isNaN(userAge);){
+      userAge = parseInt(prompt("Ваш возраст"))
+    }    
+    
+    let userGender = confirm("Ваш пол - мужской?")
+
+    let pensia
+
+    if (userGender) {
+      userGender = "Мужской"
+      
+    } else {
+      userGender = "Женский"
+    }
+
+    
+
+    alert(`Ваше ФИО: ${userLastName} ${userName} ${userSurname} \nВаш возраст в годах: ${userAge} \nВаш возвраст в дня: ${userAge*365} \nЧерез 5 лет вам будет: ${userAge + 5} \nВаш пол: ${userGender} `)
+
+  </script>
+
+
+
+</body>
+
+</html>
